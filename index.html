@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+    <link rel="stylesheet" type= "text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+<body>
+  <header> Lets play Hangman!</header>
+
+  <img src="download.png" width="300" height="175">
+  <div class="row">
+  	<div class= "col-md-6">
+  		<p id="guessedword"> this is going to have the word needed to guess</p>
+  	</div>
+ 
+  	<div class ="col-md-6">
+  		<p class="alphabet">this is going to be where the letters of the alphabet will be</p>
+  	</div>
+
+</div>
+
+<script>
+	correct=[]
+	incorrect=[]
+	var words= ["broncos", "raiders", "seahawks"];
+
+
+document.onkeyup = function(event){
+  var userInput= event.key;
+  var splitWords= words.split("");
+ console.log(splitWords)
+}
+var randomWord= words[Math.floor(Math.random() * words.length)].split("");
+console.log(randomWord)
+for(i=0; i<randomWord; i++){
+userInput=randomWord[i];
+
+}
+	</script>
+  </body>
+</html>
